@@ -37,25 +37,25 @@
 extern "C"
 {
   void
-  sifive_e51arty_interrupt_handle_unused (void);
+  bonfire_arty_interrupt_handle_unused (void);
 }
 
-namespace sifive
+namespace bonfire
 {
-  namespace e51arty
+  namespace arty
   {
     namespace interrupt
     {
       // ----------------------------------------------------------------------
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_unused (void);
 
       // ----------------------------------------------------------------------
-    } /* namespace interrupt */
-  } /* namespace e51arty */
-} /* namespace sifive */
+    }
+  }
+}
 
 // ----------------------------------------------------------------------------
 
@@ -64,9 +64,9 @@ namespace sifive
 
 #if defined(OS_USE_CPP_INTERRUPTS)
 
-namespace sifive
+namespace bonfire
 {
-  namespace e51arty
+  namespace arty
   {
     namespace interrupt
     {
@@ -74,9 +74,9 @@ namespace sifive
 
 
       // ----------------------------------------------------------------------
-    } /* namespace interrupt */
-  } /* namespace e51arty */
-} /* namespace sifive */
+    }
+  }
+}
 
 #else
 
@@ -129,11 +129,11 @@ namespace riscv
 
     // Architecture interrupts.
     void
-    __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+    __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
     handle_machine_software (void);
 
     void
-    __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+    __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
     handle_machine_timer (void);
 
     #if defined (RISCV_INTERRUPTS_GLOBAL_LAST_NUMBER)
@@ -145,7 +145,7 @@ namespace riscv
 
     // Defined in the architecture package.
     void
-    __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+    __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
     handle_machine_ext (void);
 
     #endif /* defined (RISCV_INTERRUPTS_GLOBAL_LAST_NUMBER) */
@@ -154,9 +154,9 @@ namespace riscv
   } /* namespace interrupt */
 } /* namespace riscv */
 
-namespace sifive
+namespace bonfire
 {
-  namespace e51arty
+  namespace arty
   {
     namespace interrupt
     {
@@ -164,83 +164,83 @@ namespace sifive
       // Device local interrupts.
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device0 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device1 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device2 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device3 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device4 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device5 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device6 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device7 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device8 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device9 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device10 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device11 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device12 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device13 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device14 (void);
 
       void
-      __attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+      __attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
       handle_local_device15 (void);
 
       // ----------------------------------------------------------------------
-    } /* namespace interrupt */
-  } /* namespace e51arty */
-} /* namespace sifive */
+    }
+  }
+}
 
 #else /* defined(OS_USE_CPP_INTERRUPTS) */
 
 // Architecture interrupts.
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
 riscv_interrupt_handle_machine_software (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
 riscv_interrupt_handle_machine_timer (void);
 
 #if defined (RISCV_INTERRUPTS_GLOBAL_LAST_NUMBER)
@@ -252,75 +252,75 @@ riscv_interrupt_handle_machine_ext (void);
 
 // Defined in the architecture package.
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
 riscv_interrupt_handle_machine_ext (void);
 
 #endif /* defined (RISCV_INTERRUPTS_GLOBAL_LAST_NUMBER) */
 
 // Device local interrupts.
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device0 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device0 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device1 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device1 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device2 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device2 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device3 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device3 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device4 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device4 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device5 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device5 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device6 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device6 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device7 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device7 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device8 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device8 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device9 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device9 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device10 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device10 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device11 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device11 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device12 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device12 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device13 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device13 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device14 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device14 (void);
 
 void
-__attribute__ ((weak, alias ("sifive_e51arty_interrupt_handle_unused")))
-sifive_e51arty_interrupt_handle_local_device15 (void);
+__attribute__ ((weak, alias ("bonfire_arty_interrupt_handle_unused")))
+bonfire_arty_interrupt_handle_local_device15 (void);
 
 #endif /* defined(OS_USE_CPP_INTERRUPTS) */
 
@@ -337,78 +337,78 @@ namespace riscv
 #if defined(OS_USE_CPP_INTERRUPTS)
 
         // Architecture interrupts.
-        sifive::e51arty::interrupt::handle_unused, /* 0 */
-        sifive::e51arty::interrupt::handle_unused, /* 1 */
-        sifive::e51arty::interrupt::handle_unused, /* 2 */
+        bonfire::arty::interrupt::handle_unused, /* 0 */
+        bonfire::arty::interrupt::handle_unused, /* 1 */
+        bonfire::arty::interrupt::handle_unused, /* 2 */
         riscv::interrupt::handle_machine_software, /* 3 */
-        sifive::e51arty::interrupt::handle_unused, /* 4 */
-        sifive::e51arty::interrupt::handle_unused, /* 5 */
-        sifive::e51arty::interrupt::handle_unused, /* 6 */
+        bonfire::arty::interrupt::handle_unused, /* 4 */
+        bonfire::arty::interrupt::handle_unused, /* 5 */
+        bonfire::arty::interrupt::handle_unused, /* 6 */
         riscv::interrupt::handle_machine_timer, /* 7 */
-        sifive::e51arty::interrupt::handle_unused, /* 8 */
-        sifive::e51arty::interrupt::handle_unused, /* 9 */
-        sifive::e51arty::interrupt::handle_unused, /* 10 */
+        bonfire::arty::interrupt::handle_unused, /* 8 */
+        bonfire::arty::interrupt::handle_unused, /* 9 */
+        bonfire::arty::interrupt::handle_unused, /* 10 */
         riscv::interrupt::handle_machine_ext, /* 11 */
-        sifive::e51arty::interrupt::handle_unused, /* 12 */
-        sifive::e51arty::interrupt::handle_unused, /* 13 */
-        sifive::e51arty::interrupt::handle_unused, /* 14 */
-        sifive::e51arty::interrupt::handle_unused, /* 15 */
+        bonfire::arty::interrupt::handle_unused, /* 12 */
+        bonfire::arty::interrupt::handle_unused, /* 13 */
+        bonfire::arty::interrupt::handle_unused, /* 14 */
+        bonfire::arty::interrupt::handle_unused, /* 15 */
 
         // Device local interrupts.
-        sifive::e51arty::interrupt::handle_local_device0, /* 16 */
-        sifive::e51arty::interrupt::handle_local_device1, /* 17 */
-        sifive::e51arty::interrupt::handle_local_device2, /* 18 */
-        sifive::e51arty::interrupt::handle_local_device3, /* 19 */
-        sifive::e51arty::interrupt::handle_local_device4, /* 20 */
-        sifive::e51arty::interrupt::handle_local_device5, /* 21 */
-        sifive::e51arty::interrupt::handle_local_device6, /* 22 */
-        sifive::e51arty::interrupt::handle_local_device7, /* 23 */
-        sifive::e51arty::interrupt::handle_local_device8, /* 24 */
-        sifive::e51arty::interrupt::handle_local_device9, /* 25 */
-        sifive::e51arty::interrupt::handle_local_device10, /* 26 */
-        sifive::e51arty::interrupt::handle_local_device11, /* 27 */
-        sifive::e51arty::interrupt::handle_local_device12, /* 28 */
-        sifive::e51arty::interrupt::handle_local_device13, /* 29 */
-        sifive::e51arty::interrupt::handle_local_device14, /* 30 */
-        sifive::e51arty::interrupt::handle_local_device15 /* 31 */
+        bonfire::arty::interrupt::handle_local_device0, /* 16 */
+        bonfire::arty::interrupt::handle_local_device1, /* 17 */
+        bonfire::arty::interrupt::handle_local_device2, /* 18 */
+        bonfire::arty::interrupt::handle_local_device3, /* 19 */
+        bonfire::arty::interrupt::handle_local_device4, /* 20 */
+        bonfire::arty::interrupt::handle_local_device5, /* 21 */
+        bonfire::arty::interrupt::handle_local_device6, /* 22 */
+        bonfire::arty::interrupt::handle_local_device7, /* 23 */
+        bonfire::arty::interrupt::handle_local_device8, /* 24 */
+        bonfire::arty::interrupt::handle_local_device9, /* 25 */
+        bonfire::arty::interrupt::handle_local_device10, /* 26 */
+        bonfire::arty::interrupt::handle_local_device11, /* 27 */
+        bonfire::arty::interrupt::handle_local_device12, /* 28 */
+        bonfire::arty::interrupt::handle_local_device13, /* 29 */
+        bonfire::arty::interrupt::handle_local_device14, /* 30 */
+        bonfire::arty::interrupt::handle_local_device15 /* 31 */
 
 #else /* defined(OS_USE_CPP_INTERRUPTS) */
 
         // Architecture interrupts.
-        sifive_e51arty_interrupt_handle_unused, /* 0 */
-        sifive_e51arty_interrupt_handle_unused, /* 1 */
-        sifive_e51arty_interrupt_handle_unused, /* 2 */
+        bonfire_arty_interrupt_handle_unused, /* 0 */
+        bonfire_arty_interrupt_handle_unused, /* 1 */
+        bonfire_arty_interrupt_handle_unused, /* 2 */
         riscv_interrupt_handle_machine_software, /* 3 */
-        sifive_e51arty_interrupt_handle_unused, /* 4 */
-        sifive_e51arty_interrupt_handle_unused, /* 5 */
-        sifive_e51arty_interrupt_handle_unused, /* 6 */
+        bonfire_arty_interrupt_handle_unused, /* 4 */
+        bonfire_arty_interrupt_handle_unused, /* 5 */
+        bonfire_arty_interrupt_handle_unused, /* 6 */
         riscv_interrupt_handle_machine_timer, /* 7 */
-        sifive_e51arty_interrupt_handle_unused, /* 8 */
-        sifive_e51arty_interrupt_handle_unused, /* 9 */
-        sifive_e51arty_interrupt_handle_unused, /* 10 */
+        bonfire_arty_interrupt_handle_unused, /* 8 */
+        bonfire_arty_interrupt_handle_unused, /* 9 */
+        bonfire_arty_interrupt_handle_unused, /* 10 */
         riscv_interrupt_handle_machine_ext, /* 11 */
-        sifive_e51arty_interrupt_handle_unused, /* 12 */
-        sifive_e51arty_interrupt_handle_unused, /* 13 */
-        sifive_e51arty_interrupt_handle_unused, /* 14 */
-        sifive_e51arty_interrupt_handle_unused, /* 15 */
+        bonfire_arty_interrupt_handle_unused, /* 12 */
+        bonfire_arty_interrupt_handle_unused, /* 13 */
+        bonfire_arty_interrupt_handle_unused, /* 14 */
+        bonfire_arty_interrupt_handle_unused, /* 15 */
 
         // Device local interrupts.
-        sifive_e51arty_interrupt_handle_local_device0, /* 16 */
-        sifive_e51arty_interrupt_handle_local_device1, /* 17 */
-        sifive_e51arty_interrupt_handle_local_device2, /* 18 */
-        sifive_e51arty_interrupt_handle_local_device3, /* 19 */
-        sifive_e51arty_interrupt_handle_local_device4, /* 20 */
-        sifive_e51arty_interrupt_handle_local_device5, /* 21 */
-        sifive_e51arty_interrupt_handle_local_device6, /* 22 */
-        sifive_e51arty_interrupt_handle_local_device7, /* 23 */
-        sifive_e51arty_interrupt_handle_local_device8, /* 24 */
-        sifive_e51arty_interrupt_handle_local_device9, /* 25 */
-        sifive_e51arty_interrupt_handle_local_device10, /* 26 */
-        sifive_e51arty_interrupt_handle_local_device11, /* 27 */
-        sifive_e51arty_interrupt_handle_local_device12, /* 28 */
-        sifive_e51arty_interrupt_handle_local_device13, /* 29 */
-        sifive_e51arty_interrupt_handle_local_device14, /* 30 */
-        sifive_e51arty_interrupt_handle_local_device15 /* 31 */
+        bonfire_arty_interrupt_handle_local_device0, /* 16 */
+        bonfire_arty_interrupt_handle_local_device1, /* 17 */
+        bonfire_arty_interrupt_handle_local_device2, /* 18 */
+        bonfire_arty_interrupt_handle_local_device3, /* 19 */
+        bonfire_arty_interrupt_handle_local_device4, /* 20 */
+        bonfire_arty_interrupt_handle_local_device5, /* 21 */
+        bonfire_arty_interrupt_handle_local_device6, /* 22 */
+        bonfire_arty_interrupt_handle_local_device7, /* 23 */
+        bonfire_arty_interrupt_handle_local_device8, /* 24 */
+        bonfire_arty_interrupt_handle_local_device9, /* 25 */
+        bonfire_arty_interrupt_handle_local_device10, /* 26 */
+        bonfire_arty_interrupt_handle_local_device11, /* 27 */
+        bonfire_arty_interrupt_handle_local_device12, /* 28 */
+        bonfire_arty_interrupt_handle_local_device13, /* 29 */
+        bonfire_arty_interrupt_handle_local_device14, /* 30 */
+        bonfire_arty_interrupt_handle_local_device15 /* 31 */
 
 #endif /* defined(OS_USE_CPP_INTERRUPTS) */
       };
@@ -427,7 +427,7 @@ static_assert(
 
 void
 __attribute__ ((section(".traps_handlers"),weak))
-sifive_e51arty_interrupt_handle_unused (void)
+bonfire_arty_interrupt_handle_unused (void)
 {
 #if defined(DEBUG)
   //riscv::arch::ebreak ();

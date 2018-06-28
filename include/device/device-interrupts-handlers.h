@@ -23,13 +23,16 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * Adaptions to bonfire project (c) 2018 Thomas Hornschuh
+ *
  */
 
 #ifndef BONFIRE_ARTY_DEVICE_INTERRUPTS_HANDLERS_H_
 #define BONFIRE_ARTY_DEVICE_INTERRUPTS_HANDLERS_H_
 
 /*
- * SiFive Arty E51 global interrupts handler functions.
+ * Bonfire ARTY Device Interrupt Handlers
  */
 
 #if defined(__cplusplus) && defined(OS_USE_CPP_INTERRUPTS)
@@ -56,9 +59,9 @@ namespace riscv
   } /* namespace interrupt */
 } /* namespace riscv */
 
-namespace sifive
+namespace bonfire
 {
-  namespace e51arty
+  namespace arty
   {
     namespace interrupt
     {
@@ -130,74 +133,6 @@ extern "C"
   // --------------------------------------------------------------------------
   // Global interrupt handlers. 
 
-  void
-  sifive_e51arty_interrupt_handle_global_uart0 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_external (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_spi0 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio0 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio1 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio2 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio3 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio4 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio5 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio6 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio7 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio8 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio9 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio10 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio11 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio12 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio13 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio14 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_gpio15 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_pwm0cmp0 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_pwm0cmp1 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_pwm0cmp2 (void);
-
-  void
-  sifive_e51arty_interrupt_handle_global_pwm0cmp3 (void);
 
   // --------------------------------------------------------------------------
   // Local interrupt handlers.
@@ -214,52 +149,52 @@ extern "C"
 
   // Device specific handlers.
   void
-  sifive_e51arty_interrupt_handle_local_device0 (void);
+  bonfire_arty_interrupt_handle_local_device0 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device1 (void);
+  bonfire_arty_interrupt_handle_local_device1 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device2 (void);
+  bonfire_arty_interrupt_handle_local_device2 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device3 (void);
+  bonfire_arty_interrupt_handle_local_device3 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device4 (void);
+  bonfire_arty_interrupt_handle_local_device4 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device5 (void);
+  bonfire_arty_interrupt_handle_local_device5 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device6 (void);
+  bonfire_arty_interrupt_handle_local_device6 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device7 (void);
+  bonfire_arty_interrupt_handle_local_device7 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device8 (void);
+  bonfire_arty_interrupt_handle_local_device8 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device9 (void);
+  bonfire_arty_interrupt_handle_local_device9 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device10 (void);
+  bonfire_arty_interrupt_handle_local_device10 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device11 (void);
+  bonfire_arty_interrupt_handle_local_device11 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device12 (void);
+  bonfire_arty_interrupt_handle_local_device12 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device13 (void);
+  bonfire_arty_interrupt_handle_local_device13 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device14 (void);
+  bonfire_arty_interrupt_handle_local_device14 (void);
 
   void
-  sifive_e51arty_interrupt_handle_local_device15 (void);
+  bonfire_arty_interrupt_handle_local_device15 (void);
 
 // ----------------------------------------------------------------------------
 
