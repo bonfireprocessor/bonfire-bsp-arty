@@ -28,9 +28,11 @@
 #ifndef MICRO_OS_PLUS_BOARD_H_
 #define MICRO_OS_PLUS_BOARD_H_
 
-//#include <micro-os-plus/device.h>
+#include <micro-os-plus/device.h>
 
 #include <board/defines.h>
+#include <board/functions.h>
+#include <device/device-interrupts-handlers.h>
 
 // Include common declarations.
 #include <riscv-arch/arch-declarations.h>
